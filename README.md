@@ -1,2 +1,1 @@
-# score
-Structural Co-Regression
+# Structural Co-Regression (SCoRe)
