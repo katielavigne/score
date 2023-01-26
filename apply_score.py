@@ -67,7 +67,7 @@ def apply_score(measure: str, paramfile: str, parc: pd.DataFrame, data_parc: pd.
             r2 = parc.columns[j]
             if r1 != r2:
                 reg = params.loc['Intercept', r1 + '_' + r2] + params.loc['train[r2]', r1 + '_' + r2]*data_parc[r2] + params.loc['mean_thickness', r1 + '_' + r2]*data_parc['mean_' + measure]
-                residual = parc[r2] - reg
+                residual = parc[r1] - reg
                 for pp in range(len(data_parc)):
                     conn[i,j,pp] = residual.iloc[pp]
 
